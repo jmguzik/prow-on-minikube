@@ -113,7 +113,7 @@ Please remember that the component should be compiled with static linking:
 ```
 $ CGO_ENABLED=0 go build -ldflags="-extldflags=-static"
 ```
-Image can be loaded to Minikube using different methods. The simplest would be to tag the image and load it using:
+Image can be loaded to Minikube using different methods. The simplest would be to tag the image and load it using (please add ``imagePullPolicy: IfNotPresent`` to the deployment you want to modify):
 ```
 $ minikube image load my_image
 ```
